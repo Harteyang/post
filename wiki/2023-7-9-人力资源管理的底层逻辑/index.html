@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    
+    <title>人力资源管理的底层逻辑(王雪莉) | Learning AI</title>
+    
+    
+        <meta name="keywords" content="底层逻辑,人力资源管理">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="人力资源管理的底层逻辑(王雪莉)">
+<meta property="og:url" content="http://hexogithub.site/wiki/2023-7-9-%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E7%9A%84%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/index.html">
+<meta property="og:site_name" content="Learning AI">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/07/09/2j63bCt4ferYSU1.png">
+<meta property="article:published_time" content="2023-07-09T14:25:57.538Z">
+<meta property="article:modified_time" content="2023-07-09T14:38:02.391Z">
+<meta property="article:author" content="harteyang">
+<meta property="article:tag" content="底层逻辑">
+<meta property="article:tag" content="人力资源管理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/07/09/2j63bCt4ferYSU1.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Learning AI" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Learning AI</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">目录</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">目录</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-2023-7-9-人力资源管理的底层逻辑" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/" rel="tag">人力资源管理</a>, <a class="tag-link-link" href="/tags/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/" rel="tag">底层逻辑</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/2023-7-9-%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E7%9A%84%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/">
+            <time datetime="2023-07-09T14:25:57.538Z" itemprop="datePublished">2023-07-09</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            人力资源管理的底层逻辑(王雪莉)
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p><img src="https://s2.loli.net/2023/07/09/2j63bCt4ferYSU1.png" alt="人力资源管理的底层逻辑.png"></p>
+<span id="more"></span>
+<h2 id="关于人力资源管理的一些基本逻辑"><a href="#关于人力资源管理的一些基本逻辑" class="headerlink" title="关于人力资源管理的一些基本逻辑"></a>关于人力资源管理的一些基本逻辑</h2><ul>
+<li>人力资源是组织成功或失败的关键</li>
+<li>人力资源管理如果要成功必须高层管理者参与，同时也是直线经理的职责</li>
+<li>人力资源政策是系统的一部分而不能被割裂开来；<ul>
+<li>保持政策的稳定性</li>
+</ul>
+</li>
+</ul>
+<h2 id="决定人力资源的人性假设的逻辑"><a href="#决定人力资源的人性假设的逻辑" class="headerlink" title="决定人力资源的人性假设的逻辑"></a>决定人力资源的人性假设的逻辑</h2><ul>
+<li>理论<ul>
+<li>经济人(Y)<ul>
+<li>麦格里戈<ul>
+<li>性恶论 “目好色，耳好声，口好味，心好利骨体肤里好愉逸” - 苟子</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>社会人<ul>
+<li>梅奥<ul>
+<li>性善论 “恻隐之心，善恶之心，辞让之心，是非之心”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>自动人 (Y)<ul>
+<li>麦格里戈<ul>
+<li>尽性主义 “把各人的天赋良能发挥到十分圆满，人人可以自立。” - 梁启超</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>复杂人 (超Y)<ul>
+<li>沙因<ul>
+<li>流水人性 “人性无分善与不善，决诸东方则东流，决诸西方则西流” - 告子</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>匹配<ul>
+<li>各政策活动背后的人性假设要匹配</li>
+<li>员工所表现出来的人性假设是匹配的</li>
+<li>人性假设在管理过程中是动态的</li>
+</ul>
+</li>
+</ul>
+<h2 id="人力资源管理的基本目标"><a href="#人力资源管理的基本目标" class="headerlink" title="人力资源管理的基本目标"></a>人力资源管理的基本目标</h2><ul>
+<li>短期目标<ul>
+<li>人得其事</li>
+<li>事得其人</li>
+<li>人尽其才</li>
+<li>事尽其功</li>
+<li>做好了，团队整体和谐；做的不好，团队成员的体感是养了闲人</li>
+</ul>
+</li>
+<li>长远目标<ul>
+<li>人力资源成为组织的竞争优势</li>
+<li>好消息：难以模仿、不易替代</li>
+<li>坏消息：不容易做到</li>
+</ul>
+</li>
+</ul>
+<h2 id="组织用人模型的逻辑"><a href="#组织用人模型的逻辑" class="headerlink" title="组织用人模型的逻辑"></a>组织用人模型的逻辑</h2><ul>
+<li>劳动者承诺雇佣模型<ul>
+<li>(在员工关系上比较长远并注重在企业内开发社会和智力资本)</li>
+<li>哲学: MAKE培养</li>
+<li>目标: 最大化员工授权、质量、工作分配的灵活性人力资本开发责任: 企业和员工共同承担</li>
+<li>雇佣关系重点: 长期、员工是企业运作的资源产品市场波动的经济风险: 共同承担</li>
+<li>特点：在变革时遇到的阻碍更大</li>
+</ul>
+</li>
+<li>劳动力交易雇佣模型<ul>
+<li>(在组织内最小化工资和福利开支，并维持最低的交易和雇佣水平)</li>
+<li>哲学: BUY 采购</li>
+<li>目标: 通过最小化“所有”形态最大化雇佣</li>
+<li>雇佣关系重点:短期、工作导向，成本员工自身承担</li>
+<li>特点：灵活性：员工自己承担，大量的外包和流动</li>
+</ul>
+</li>
+<li>通过社招和校招去区分</li>
+<li>核心—非核心劳动力模型<ul>
+<li>特点是：核心骨干采用培养，一些非核心岗位采用外招</li>
+<li>劣势，在变革时遇到的阻碍更大</li>
+<li>会增加管理难度</li>
+</ul>
+</li>
+</ul>
+<h2 id="招聘的逻辑"><a href="#招聘的逻辑" class="headerlink" title="招聘的逻辑"></a>招聘的逻辑</h2><ul>
+<li>那种匹配（FIT）<ul>
+<li>人与组织匹配<ul>
+<li>承诺模型</li>
+</ul>
+</li>
+<li>人与工作&#x2F;岗位匹配<ul>
+<li>雇佣模型</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>招聘的目的是找到对的人（Right person）<ul>
+<li>Pay to quit.</li>
+</ul>
+</li>
+</ul>
+<h2 id="绩效管理的逻辑"><a href="#绩效管理的逻辑" class="headerlink" title="绩效管理的逻辑"></a>绩效管理的逻辑</h2><ul>
+<li>绩效管理制度的解读视角<ul>
+<li>指挥棒<ul>
+<li>是否清晰：如果我是被管理方，能读出怎么做才能拿到优秀和获得最高的奖金</li>
+<li>是否有效：如果我是管理方，能读出怎么做才能优秀，但是这样做是不是组织希望的？</li>
+</ul>
+</li>
+<li>绩效沟通与反馈<ul>
+<li>谈什么？<ul>
+<li>为什么要设置这些指标</li>
+<li>我如何帮助你做的更好</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>绩效管理制度的制定视角<ul>
+<li>分配导向<ul>
+<li>奖金&#x2F;资源分配<ul>
+<li>员工更关注结果</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>发展导向<ul>
+<li>帮助员工提升绩效达成能力</li>
+<li>所以绩效本身要和奖金时间点分开</li>
+</ul>
+</li>
+<li>战略或文化变革先锋<ul>
+<li>战略变化，绩效必须先行</li>
+<li>文化变革，绩效先行</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="薪酬福利的逻辑"><a href="#薪酬福利的逻辑" class="headerlink" title="薪酬福利的逻辑"></a>薪酬福利的逻辑</h2><ul>
+<li>薪酬制度的基本构成<ul>
+<li>结构</li>
+<li>基础</li>
+<li>水平</li>
+<li>差异</li>
+</ul>
+</li>
+<li>薪酬沟通的重要性<ul>
+<li>秘薪到底秘什么？</li>
+</ul>
+</li>
+<li>福利是最便宜的成本？<ul>
+<li>自选福利菜单的两难</li>
+<li>年轻和大龄群体的区别</li>
+<li>下午茶的功能</li>
+</ul>
+</li>
+</ul>
+<h2 id="认可和奖励的逻辑"><a href="#认可和奖励的逻辑" class="headerlink" title="认可和奖励的逻辑"></a>认可和奖励的逻辑</h2><ul>
+<li>基于强化理论与社会学习理论<ul>
+<li>奖励强化好的行为</li>
+<li>引起其他人的行为效仿</li>
+</ul>
+</li>
+</ul>
+<h2 id="职业发展的逻辑"><a href="#职业发展的逻辑" class="headerlink" title="职业发展的逻辑"></a>职业发展的逻辑</h2><ul>
+<li>工作丰富化与扩大化的由来</li>
+<li>传统职业发展通道的困境</li>
+<li>职业机会池的意义</li>
+</ul>
+<h2 id="人力资源管理面临的挑战和新趋势"><a href="#人力资源管理面临的挑战和新趋势" class="headerlink" title="人力资源管理面临的挑战和新趋势"></a>人力资源管理面临的挑战和新趋势</h2><ul>
+<li>对人才的竞争: 跨界竞争</li>
+<li>To be rich or to be king?: 双创环境的吸引力</li>
+<li>人力成本不断提升: 如何衡量人力资源的收益?</li>
+<li>新一代员工的职场价值观变化：倒逼管理制度体系和领导方式的调整</li>
+<li>交易用人模型对于承诺用人模型的挑战: 想说爱你不容易</li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/2023-07-16-%E4%B8%BA%E6%96%B0%E4%B8%BB%E7%AE%A1%E6%90%AD%E5%8F%B0-%E6%96%B0%E4%BA%BA%E5%9C%86%E6%A1%8C%E6%99%9A%E9%A4%90%E4%BC%9A/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    为主管搭台-新人圆桌会
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/2023-7-8-%E9%9D%A2%E8%AF%95%E6%A1%86%E6%9E%B6/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">通用面试考察框架</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            harteyang &copy; 2023 
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+           
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

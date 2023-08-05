@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Learning AI</title>
+    
+    
+        <meta name="keywords" content="Learning AI">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Learning AI">
+<meta property="og:url" content="http://hexogithub.site/page/3/index.html">
+<meta property="og:site_name" content="Learning AI">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="harteyang">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Learning AI" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Learning AI</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">目录</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">目录</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main">
+        <article id="post-2022-8-3-费里斯的11个好问题" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/2022-8-3-%E8%B4%B9%E9%87%8C%E6%96%AF%E7%9A%8411%E4%B8%AA%E5%A5%BD%E9%97%AE%E9%A2%98/">
+            <time datetime="2022-08-05T01:00:00.000Z" itemprop="datePublished">2022-08-05</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/2022-8-3-%E8%B4%B9%E9%87%8C%E6%96%AF%E7%9A%8411%E4%B8%AA%E5%A5%BD%E9%97%AE%E9%A2%98/">费里斯的11个好问题</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                <p></p><p><strong>或许跟我一样，偶尔会思考以下几个问题：</strong><br>如果你对面坐着一个跟你不是特别熟悉的前辈，你不想尴尬，必须和对方聊点什么的时候，你该怎么提问？<br> 如果你跟公司CEO同时走进电梯，你可以跟他聊些什么话题？<br> 不让对方感觉尴尬，又能让你从中获益的问题有哪些？</p><p></p>
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/2022-8-3-%E8%B4%B9%E9%87%8C%E6%96%AF%E7%9A%8411%E4%B8%AA%E5%A5%BD%E9%97%AE%E9%A2%98/#more">查看更多</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-2019-03-29-实习总结" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/2019-03-29-%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/">
+            <time datetime="2019-03-29T01:00:00.000Z" itemprop="datePublished">2019-03-29</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/2019-03-29-%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/">实习总结（文静）</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                <p></p><p><strong>1、核心工作职责</strong></p>
+<p>·协助HRG招聘，包括找简历、HR面试、与业务部门约面试、候选人面试跟进、谈offer</p>
+<p>·支撑标注团队，包括招聘、文化建设、干部选拔、培训、绩效面谈、员工关系管理</p><p></p>
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/2019-03-29-%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/#more">查看更多</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-2018-09-20-面试邀约" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/2018-09-20-%E9%9D%A2%E8%AF%95%E9%82%80%E7%BA%A6/">
+            <time datetime="2018-09-20T01:00:00.000Z" itemprop="datePublished">2018-09-20</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/2018-09-20-%E9%9D%A2%E8%AF%95%E9%82%80%E7%BA%A6/">关于约面（黎媛整理）</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                <p></p><p><em><strong>本次约面总结主要包含邀约非主动投递候选者的约面流程和沟通技巧。</strong></em></p>
+<p><strong>招聘场景：</strong></p>
+<p>岗位的简历投递量不大或公司急招，我们需要通过主动搜索简历来增加候选人数量和缩短招聘时间。主动搜索到的侯选人对公司和岗位并不了解，在邀约这些候选人时，需要有一些特别要注意的地方。<br>邀约流程：</p><p></p>
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/2018-09-20-%E9%9D%A2%E8%AF%95%E9%82%80%E7%BA%A6/#more">查看更多</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-2018-09-20-biaozhugognjianzongjie" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/2018-09-20-biaozhugognjianzongjie/">
+            <time datetime="2018-09-20T00:55:00.000Z" itemprop="datePublished">2018-09-20</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/2018-09-20-biaozhugognjianzongjie/">数据标注攻坚招聘总结（文静）</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                <p></p><p>如果没有图片请点击<a target="_blank" rel="external nofollow noopener noreferrer" href="https://pan.baidu.com/s/1KKMDzZIK9g2xzGmAlr7p4w?pwd=fbc1">下载PDF</a>提取码: fbc1</p>
+<p><strong>一、	项目背景</strong></p>
+<p>此次人员扩充截止时间为8月中旬。结合业务发展和成都site实际情况，公司计划在成都搭建一个”数据标注”团队，leader从北京调回。<br>为了规避风险，我们此次招聘HC设定为30人，实际入职人数在22-30人之间都可。招聘方式为渠道合作–萌想科技（实习僧），定价为1000元&#x2F;人。</p><p></p>
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/2018-09-20-biaozhugognjianzongjie/#more">查看更多</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-2016-06-13-我经常提起的Jessica" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/2016-06-13-%E6%88%91%E7%BB%8F%E5%B8%B8%E6%8F%90%E8%B5%B7%E7%9A%84Jessica/">
+            <time datetime="2016-06-13T00:55:00.000Z" itemprop="datePublished">2016-06-13</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/2016-06-13-%E6%88%91%E7%BB%8F%E5%B8%B8%E6%8F%90%E8%B5%B7%E7%9A%84Jessica/">我经常提起的Jessica</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                <p></p><p><em><strong>Jessica是我在IObit时的领导。也是我一起工作过的时间最短的领导，算是我HR道路上的一个小插曲，但也是我比较认可的一位前辈。她完全有资格用自己的经历改变大家对生活的态度。</strong></em></p>
+<p>现在还记得她说的那句话：“不要轻易的否定你的领导，因为至少他有一点是比你优秀的，之所以成为你的领导是因为他比你更有价值，而这点价值就是你最应该学习和提升的地方。”</p><p></p>
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/2016-06-13-%E6%88%91%E7%BB%8F%E5%B8%B8%E6%8F%90%E8%B5%B7%E7%9A%84Jessica/#more">查看更多</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-2016-04-22-离职分享，关于招聘" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/2016-04-22-%E7%A6%BB%E8%81%8C%E5%88%86%E4%BA%AB%EF%BC%8C%E5%85%B3%E4%BA%8E%E6%8B%9B%E8%81%98/">
+            <time datetime="2016-04-22T09:35:00.000Z" itemprop="datePublished">2016-04-22</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/2016-04-22-%E7%A6%BB%E8%81%8C%E5%88%86%E4%BA%AB%EF%BC%8C%E5%85%B3%E4%BA%8E%E6%8B%9B%E8%81%98/">离职分享，关于招聘</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                <p></p><p>IObit工作三年半从公司创业到上市，经历了最宝贵的三年半，临走时老大要求我做一个分享，于是又了下面的记录：<br>2012年第一个工作日加入IObit，在这里三年半的时间了，现在即将离开，颇多不舍，给分享一些我在这里的收获，希望对大家工作有所帮助。<br>记得Jessica面试的时候问过我一个问题“你觉得HR部门在公司扮演什么样的角色？”我当时的答案是“服务部门的角色，服务业务部门、服务公司管理。”很一般的回答，但是我看到Jessica脸上漏出了微笑。<br>是的过去的三年半我们一直以这样的定位去要求自己，而人力资源部门也越来越受到公司和业务部门的尊重，从最初把我们当成是一个事务性的部门，到现在所以管理决策都会来征求我们的意见。所以人力资源部是值得大家尊重和值得我们在这里奉献的平台。</p><p></p>
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/2016-04-22-%E7%A6%BB%E8%81%8C%E5%88%86%E4%BA%AB%EF%BC%8C%E5%85%B3%E4%BA%8E%E6%8B%9B%E8%81%98/#more">查看更多</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-2016-04-03-Mac+Hexo+Github搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/hexo-github/" rel="tag">hexo+github</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/2016-04-03-Mac+Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+            <time datetime="2016-04-21T14:03:00.000Z" itemprop="datePublished">2016-04-21</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/2016-04-03-Mac+Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac+Hexo+Github搭建个人博客</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                <p></p><p>本文主要面向那些希望创建自己的个人博客，且具有一定的编程知识的读者。作为HR里少有的学通信工程的，也是少有的希望折腾博客的人，我在多年前就用Hexo+git创建了博客。现在我想要分享这个过程，以帮助那些想要搭建自己博客的人。<br><strong>Hexo的工作原理</strong>就是把博客文件生成一个静态页面，然后部署到github的静态页面仓库就可以访问了。Github的仓库支持配置静态页面并通过域名绑定地址访问。</p>
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/2016-04-03-Mac+Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">查看更多</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+        </nav>
+    
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            harteyang &copy; 2023 
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+           
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

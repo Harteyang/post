@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    
+    <title>量产预算的一些思考 | Learning AI</title>
+    
+    
+        <meta name="keywords" content="量产预算的一些思考">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="上周用工规划会上CY的量产预算被讨论，WC老师直接问道量产费用谁定的价，定价依据是什么，欧哥说以之前的经验来说价格感觉是高的，罗老师说定价依据主要是看图片大小，像素和画手需要的时间，所以让kevin给一些图片做参考。最后因为会上没有足够的信息，所以会后todo是让kevin重新梳理下图片量产定价的过程和依据。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="量产预算的一些思考">
+<meta property="og:url" content="http://hexogithub.site/wiki/2022-8-25-%E9%87%8F%E4%BA%A7%E9%A2%84%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/index.html">
+<meta property="og:site_name" content="Learning AI">
+<meta property="og:description" content="上周用工规划会上CY的量产预算被讨论，WC老师直接问道量产费用谁定的价，定价依据是什么，欧哥说以之前的经验来说价格感觉是高的，罗老师说定价依据主要是看图片大小，像素和画手需要的时间，所以让kevin给一些图片做参考。最后因为会上没有足够的信息，所以会后todo是让kevin重新梳理下图片量产定价的过程和依据。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-25T01:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-30T08:09:00.000Z">
+<meta property="article:author" content="harteyang">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Learning AI" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Learning AI</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">目录</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">目录</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-2022-8-25-量产预算的一些思考" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/2022-8-25-%E9%87%8F%E4%BA%A7%E9%A2%84%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">
+            <time datetime="2022-08-25T01:00:00.000Z" itemprop="datePublished">2022-08-25</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            量产预算的一些思考
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>上周用工规划会上CY的量产预算被讨论，WC老师直接问道量产费用谁定的价，定价依据是什么，欧哥说以之前的经验来说价格感觉是高的，罗老师说定价依据主要是看图片大小，像素和画手需要的时间，所以让kevin给一些图片做参考。最后因为会上没有足够的信息，所以会后todo是让kevin重新梳理下图片量产定价的过程和依据。</p>
+<span id="more"></span>
+<p>说说BP的感受，上半年其实CY的量产定价就被用工规划小组提及费用的问题，但是因为当时的精力和优先级不在这里，简单点说，就是要管的话ROI算不算的过来的问题。这里面的核心矛盾是没有把定价流程和合理性通过会议或者文件或者借助第三方暴露给决策和管理方。因为外部环境和不同业务对兼职画手的要求不一样，有的业务是成本有先，有的是速度或质量优先，那么预算成本都会不一样。当第一次被问及定价的问题时，其实CY是不想过多解释，因为当下并不是成本优先的原则，kevin也不想去看细节，因为他的第一优先级是能不能快速保质保量的做出来。</p>
+<h2 id="跟wendy过询价"><a href="#跟wendy过询价" class="headerlink" title="跟wendy过询价"></a>跟wendy过询价</h2><p>事后kevin让wendy整理了询价的材料，其中非常重要的2点分别是：<br><strong>兼职画手的选择标准（业务需求的顶层逻辑）</strong><br>以上已经提到对于CY而言，快速的保质保量的产出是基本都要求。所以在选择画手的时候这个会作为第一优先级。其次才是如何定价的问题。定价的第一性原理并不是大家所说的图片大小和费时的问题，最主要的是能否还原教研对于图片意图的理解，能否用场景还原想表达的意图，其次才是说完成这个意图需要多么复杂的场景，需要花多少时间，这个需要的人力成本投入会决定价格。<br>容易被忽略的地方是画手的会意能力和跟教研的沟通能力，一般磨合好一个画手达到一次出图，一两次修改就能满足要求是非常难的，所以这也是一个溢价的过程。<br><strong>不同素材的定价标准和隐形成本</strong><br>最大的成本是时间成本和沟通成本，线性化的表现是画手对于教研意图的理解，比如一次就能输出一个符合教研内容的图片，通过沟通稍微做一些细节调整，就非常的节约时间成本和高效了，这个是理想状态，这个应该被溢价。<br>其次是沟通成本，如果多次反复沟通后做出来的图片的质量都达不到要求，那么最终这个画手和公司对接同事的时间都被浪费了，双方都不能满意，哪怕价格再低也是不符合快速高质高量的完成任务。</p>
+<p>会过来要去寻找和组织这一类画手也是一个非常费时的过程，要花大量的时间和项目的磨合才能达到彼此的默契，这个是很容易被忽视的隐性成本。不容易被管理层看见。<br><strong>怎么规避专业的能被评价</strong><br>就像HR岗位一样，外行根本不理解，更别说什么模型和分工。量产工作也是一样，是一项设计能力和分工都非常需要专业能力才能组织起来的工作。如果对外行可能我们需要讲清楚我们的顶层决策标准是什么，隐形成本是什么，再来说具体的行业定价。<br>为什么别人做一个小程序需要大几十万的成本，外包只需要几万块。这期间差别是什么，成本是什么，都需要讲清楚。<br>定价是否考虑专业稀缺性，时间成本，沟通成本和个性化要求这些综合因素，对于业务当下来说应该关注哪些点。都需要被解释清楚。</p>
+<p>那么作为公司管理应该抓什么？抓决策流程，抓决策依据，抓廉政体系。回忆在旷视的几年，虽然从效率上讲会觉得低，但供应链体系和决策流程是科学健康的。保证了组织的安全，如果回到CYA这个体量，我们的犯错成本是在百万级，也就还好。抓住决策流程和依据就能很好的控制风险和优化成本了。</p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/2022-8-28-%E5%AD%A6%E4%B9%A0%E4%B8%8A%E7%9A%84%E5%BC%AF%E8%B7%AF%EF%BC%88%E4%BB%8E%E4%B8%80%E7%B1%BB%E7%BB%83%E4%B9%A0%E5%88%B0%E5%85%AD%E7%B1%BB%E7%BB%83%E4%B9%A0%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    学习上的弯路（从一类练习到六类练习）
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/2022-8-24-%E5%A4%84%E7%90%86%E5%A4%96%E9%83%A8%E6%81%B6%E6%84%8F%E5%B7%AE%E8%AF%84/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">前员工的恶意差评</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            harteyang &copy; 2023 
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+           
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
