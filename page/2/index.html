@@ -1,514 +1,518 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    
-    <title>HR工作笔记</title>
-    
-    
-        <meta name="keywords" content="HR工作笔记">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="HR工作笔记">
-<meta property="og:url" content="https://blog.harte.top/page/2/index.html">
-<meta property="og:site_name" content="HR工作笔记">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="harteyang">
-<meta name="twitter:card" content="summary">
-    
-
-    
-        <link rel="alternate" href="/atom.xml" title="HR工作笔记" type="application/atom+xml">
-    
-
-    
-        <link rel="icon" href="/favicon.ico">
-    
-
-    
-<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-
-    
-<link rel="stylesheet" href="/libs/open-sans/styles.css">
-
-    
-<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+  <meta charset="UTF-8">
 
 
-    
-<link rel="stylesheet" href="/css/style.css">
-
-    
-<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
-
-    
-<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
-
-    
-    
-        
-<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
-
-    
-    
-        
-<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
-
-    
-    
-    
-    
 
 
-    
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<body>
-    <div id="container">
-        <header id="header">
-    <div id="header-main" class="header-inner">
-        <div class="outer">
-            <a href="/" id="logo">
-                <i class="logo"></i>
-                <span class="site-title">HR工作笔记</span>
-            </a>
-            <nav id="main-nav">
-                
-                    <a class="main-nav-link" href="/">目录</a>
-                
-            </nav>
-            
-            <div id="search-form-wrap">
+  <meta name="author" content="harteyang">
 
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
+
+
+  <meta name="description" content="一个大龄HR男从业者的随手记">
+
+
+
+<title>不惑偶书</title>
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
+
+
+
+<script src="/lib/jquery.min.js"></script>
+
+
+<script src="/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 <script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
-            UNTITLED: '(未命名)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
+  tailwind.config = {
+    darkMode: "class",
+  };
 </script>
 
-<script src="/js/insight.js"></script>
+
+<script src="/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
 
 
-</div>
-        </div>
-    </div>
-    <div id="main-nav-mobile" class="header-sub header-inner">
-        <table class="menu outer">
-            <tr>
-                
-                    <td><a class="main-nav-link" href="/">目录</a></td>
-                
-                <td>
-                    
-    <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
-    </div>
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      isDark = !isDark;
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+    $("#toggle-dark").click(toggleDark);
 
-                </td>
-            </tr>
-        </table>
-    </div>
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="不惑偶书" type="application/atom+xml">
+</head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="不惑偶书">
+          不惑偶书
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+        
+          
+        
+        <a class="w-5 h-5 hidden sm:flex" title href="/rss2.xml">
+          <iconify-icon width="20" icon="ri:rss-line"></iconify-icon>
+        </a>
+        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+          <iconify-icon width="20" icon id="theme-icon"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu"></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon width="20" icon="carbon:close"></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
 </header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
 
-        <div class="outer">
-            
-            
-                <aside id="sidebar">
-   
-        
-    <div class="widget-wrap" id="categories">
-        <h3 class="widget-title">
-            <span>分类</span>
-            &nbsp;
-            <a id="allExpand" href="#">
-                <i class="fa fa-angle-double-down fa-2x"></i>
-            </a>
-        </h3>
-        
-        
-        
-         <ul class="unstyled" id="tree"> 
-                    <li class="directory">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
-                            &nbsp;
-                            HR 100问
-                        </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/2023-08-18-HR100%E9%97%AE/">HR 100问</a></li>  </ul> 
-                    </li> 
-                    
-                    <li class="directory">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
-                            &nbsp;
-                            复盘经验
-                        </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/2016-04-22-%E7%A6%BB%E8%81%8C%E5%88%86%E4%BA%AB%EF%BC%8C%E5%85%B3%E4%BA%8E%E6%8B%9B%E8%81%98/">离职分享，关于招聘</a></li>  <li class="file"><a href="/wiki/2018-09-20-%E6%95%B0%E6%8D%AE%E6%A0%87%E6%B3%A8%E6%94%BB%E5%9D%9A%E6%8B%9B%E8%81%98%E6%80%BB%E7%BB%93/">数据标注攻坚招聘总结（文静）</a></li>  <li class="file"><a href="/wiki/2018-09-20-%E9%9D%A2%E8%AF%95%E9%82%80%E7%BA%A6/">关于约面（黎媛整理）</a></li>  <li class="file"><a href="/wiki/2019-03-29-%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/">实习总结（文静）</a></li>  </ul> 
-                    </li> 
-                    
-                    <li class="directory">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
-                            &nbsp;
-                            学习提升
-                        </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/2016-04-03-Mac+Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac+Hexo+Github搭建个人博客</a></li>  </ul> 
-                    </li> 
-                    
-                    <li class="directory">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
-                            &nbsp;
-                            工作记录
-                        </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/2016-06-13-%E6%88%91%E7%BB%8F%E5%B8%B8%E6%8F%90%E8%B5%B7%E7%9A%84Jessica/">我经常提起的Jessica</a></li>  <li class="file"><a href="/wiki/2022-8-3-%E6%83%B3%E9%80%9A%E8%BF%87%E5%A4%8D%E7%9B%98%E6%8F%90%E5%8D%87%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8F%8D%E6%80%9D%E6%B7%B1%E5%BA%A6%EF%BC%882022%E5%B9%B48%E6%9C%884%E6%97%A5%201027%EF%BC%89/">想通过复盘提升自己的反思深度</a></li>  <li class="file"><a href="/wiki/index/">费里斯的11个好问题</a></li>  <li class="file"><a href="/wiki/2022-8-13-%E5%AE%9E%E4%B9%A0%E7%94%9F%E7%9A%84%E6%80%9D%E8%80%83/">关于实习生的一点思考</a></li>  <li class="file"><a href="/wiki/2022-8-16-%E8%B7%9FSuri%E7%9A%84%E6%99%9A%E9%A4%90/">跟Suri的晚餐</a></li>  <li class="file"><a href="/wiki/2022-8-19-%E8%B7%9FTT%E7%BB%A9%E6%95%88%E9%9D%A2%E8%B0%88/">跟TT绩效面谈</a></li>  <li class="file"><a href="/wiki/2022-8-24-%E5%A4%84%E7%90%86%E5%A4%96%E9%83%A8%E6%81%B6%E6%84%8F%E5%B7%AE%E8%AF%84/">前员工的恶意差评</a></li>  <li class="file"><a href="/wiki/2022-8-25-%E9%87%8F%E4%BA%A7%E9%A2%84%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">量产预算的一些思考</a></li>  <li class="file"><a href="/wiki/2022-8-28-%E5%AD%A6%E4%B9%A0%E4%B8%8A%E7%9A%84%E5%BC%AF%E8%B7%AF%EF%BC%88%E4%BB%8E%E4%B8%80%E7%B1%BB%E7%BB%83%E4%B9%A0%E5%88%B0%E5%85%AD%E7%B1%BB%E7%BB%83%E4%B9%A0%EF%BC%89/">学习上的弯路（从一类练习到六类练习）</a></li>  <li class="file"><a href="/wiki/2022-9-25-%E5%A4%A7%E6%95%B0%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E8%B0%83%E6%95%B4/">大数组织结构调整</a></li>  <li class="file"><a href="/wiki/2022-9-28-%E5%88%86%E6%AD%A7%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">分歧处理技术学习</a></li>  <li class="file"><a href="/wiki/2022-10-03-9%E6%9C%88%E5%9B%9E%E9%A1%BE/">9月回顾</a></li>  <li class="file"><a href="/wiki/2022-10-30-%E5%A4%84%E7%90%86L%E4%B9%8B%E9%97%B4%E5%88%86%E6%AD%A7%E4%B8%AD%E8%B7%9FO%E5%93%A5%E5%AD%A6%E5%88%B0%E7%9A%84%E5%87%A0%E4%B8%AA%E5%8F%8D%E6%80%9D%E7%82%B9/">处理L之间分歧中跟O哥学到的几个反思点</a></li>  <li class="file"><a href="/wiki/2023-02-06-%E8%81%8C%E5%9C%BA%E7%BA%A2%E7%BA%BF/">职场红线</a></li>  <li class="file"><a href="/wiki/2023-07-01-%E8%81%8C%E5%9C%BA%E5%BD%B1%E5%93%8D%E5%8A%9B/">职场影响力</a></li>  <li class="file"><a href="/wiki/2023-07-02-%E4%BA%BA%E5%8A%9B%E6%95%B0%E6%8D%AE%E5%9F%BA%E5%BB%BA/">人力数据基建</a></li>  <li class="file"><a href="/wiki/2023-7-7-%E6%8F%90%E5%8D%87%E6%96%B0%E4%BA%BA%E5%8D%B3%E6%88%98%E5%8A%9B%EF%BC%9A%E5%A6%82%E4%BD%95%E4%BA%A4%E4%BB%98%E4%B8%9A%E5%8A%A1%E7%88%86%E7%82%B8%E5%BC%8F%E7%94%A8%E4%BA%BA%E9%9C%80%E6%B1%82/">提升新人即战力：如何交付业务爆炸式用人需求</a></li>  <li class="file"><a href="/wiki/2023-7-8-HRBP%E6%8E%A8%E5%8A%A8%E4%B8%9A%E5%8A%A1Review%E7%BC%96%E5%88%B6%E5%92%8C%E4%BA%BA%E5%8A%9B%E6%88%90%E6%9C%AC/">一个推动业务Review编制和成本的方法</a></li>  <li class="file"><a href="/wiki/2023-7-8-%E9%9D%A2%E8%AF%95%E6%A1%86%E6%9E%B6/">通用面试考察框架</a></li>  <li class="file"><a href="/wiki/2023-7-9-%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E7%9A%84%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/">人力资源管理的底层逻辑(王雪莉)</a></li>  <li class="file"><a href="/wiki/2023-07-16-%E4%B8%BA%E6%96%B0%E4%B8%BB%E7%AE%A1%E6%90%AD%E5%8F%B0-%E6%96%B0%E4%BA%BA%E5%9C%86%E6%A1%8C%E6%99%9A%E9%A4%90%E4%BC%9A/">为主管搭台-新人圆桌会</a></li>  <li class="file"><a href="/wiki/2023-7-26-%E8%B7%B3%E5%87%BA%E5%9B%BA%E5%AE%9A%E6%80%9D%E7%BB%B4%EF%BC%88%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E6%8E%92%E7%8F%AD%E5%81%87%E8%AE%BE%E7%9A%84%E6%8F%90%E5%87%BA%EF%BC%89/">记录一次排班假设的提出</a></li>  </ul> 
-                    </li> 
-                    
-                    <li class="directory">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
-                            &nbsp;
-                            感恩相遇
-                        </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/2023-08-18-%E6%84%9F%E6%81%A9%E7%9B%B8%E9%81%87/">感恩相遇</a></li>  </ul> 
-                    </li> 
-                     <li class="file"><a href="/wiki/2023-08-25-Buddy%E6%8C%87%E5%8D%97/"></a></li>  </ul> 
-    </div>
-    <script>
-        $(document).ready(function() {
-            var iconFolderOpenClass  = 'fa-folder-open';
-            var iconFolderCloseClass = 'fa-folder';
-            var iconAllExpandClass = 'fa-angle-double-down';
-            var iconAllPackClass = 'fa-angle-double-up';
-            // Handle directory-tree expansion:
-            // 左键单独展开目录
-            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
-                event.preventDefault();
-
-                var icon = $(this).children('.fa');
-                var expanded = icon.hasClass(iconFolderOpenClass);
-                var subtree = $(this).siblings('ul');
-                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
-                if (expanded) {
-                    if (typeof subtree != 'undefined') {
-                        subtree.slideUp({ duration: 100 });
-                    }
-                    icon.addClass(iconFolderCloseClass);
-                } else {
-                    if (typeof subtree != 'undefined') {
-                        subtree.slideDown({ duration: 100 });
-                    }
-                    icon.addClass(iconFolderOpenClass);
-                }
-            });
-            // 右键展开下属所有目录
-            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
-                event.preventDefault();
-                
-                var icon = $(this).children('.fa');
-                var expanded = icon.hasClass(iconFolderOpenClass);
-                var listNode = $(this).siblings('ul');
-                var subtrees = $.merge(listNode.find('li ul'), listNode);
-                var icons = $.merge(listNode.find('.fa'), icon);
-                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
-                if(expanded) {
-                    subtrees.slideUp({ duration: 100 });
-                    icons.addClass(iconFolderCloseClass);
-                } else {
-                    subtrees.slideDown({ duration: 100 });
-                    icons.addClass(iconFolderOpenClass);
-                }
-            })
-            // 展开关闭所有目录按钮
-            $(document).on('click', '#allExpand', function (event) {
-                event.preventDefault();
-                
-                var icon = $(this).children('.fa');
-                var expanded = icon.hasClass(iconAllExpandClass);
-                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
-                if(expanded) {
-                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
-                    $('#categories li ul').slideDown({ duration: 100 });
-                    icon.addClass(iconAllPackClass);
-                } else {
-                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
-                    $('#categories li ul').slideUp({ duration: 100 });
-                    icon.addClass(iconAllExpandClass);
-                }
-            });  
-        });
-    </script>
-
+  <main class="pt-14">
+    <section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
+  <div class="flex flex-col h-48 items-center justify-center">
+    <h1 class="site-title text-4xl leading-relaxed">
+      不惑偶书
+    </h1>
+    <p class="text-gray-500 mt-2">
+      
+    </p>
+  </div>
+  
+  
     
-    <div id="toTop" class="fa fa-angle-up"></div>
-</aside>
-            
-            <section id="main">
-    <article id="post-index" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">工作记录</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/index/">
-            <time datetime="2022-08-05T01:00:00.000Z" itemprop="datePublished">2022-08-05</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                    </div>
-                
-                
     
-        <h1 class="article-title" itemprop="name">
-            费里斯的11个好问题
-        </h1>
+      <div class="relative pointer-events-none">
+        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2022</span>
+      </div>
     
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-        
-        
-            <p><strong>或许跟我一样，偶尔会思考以下几个问题：</strong><br>如果你对面坐着一个跟你不是特别熟悉的前辈，你不想尴尬，必须和对方聊点什么的时候，你该怎么提问？<br> 如果你跟公司CEO同时走进电梯，你可以跟他聊些什么话题？<br> 不让对方感觉尴尬，又能让你从中获益的问题有哪些？</p>
-<span id="more"></span>
-<p>有个美国人蒂姆、费里斯，他40岁那年遭遇了中年危机，感觉人生失去了方向。他心里有很多的问题，却不知道该问谁。他突然想到，”如果我拥有一个导师天团来帮助我，那会怎么样？“<br>于是他自己动手整理了一个人物清单，一共300多人，包括时下他能想到的最出名的人物，包括桥水基金创始人、TED创始人、《人类简史》的作者和传奇主持人拉里、金等。<br>费力向这些人发送了邮件，里面有11个问题。一开始费里斯没有报太大希望，但出乎意料的是有一半的人认真的回答了这些问题，费里斯将他们的回答汇编成书，就是《巨人的方法》。<br>那么费里斯问了什么问题，收到这么高的回复？以下就是他的11个问题：</p>
-<blockquote>
-<ol>
-<li>你最常当作礼物送给他人的3本书是什么？  </li>
-<li>最近有哪个100美元以内的产品带给你惊喜感？  </li>
-<li>有没有某次你发自内心喜欢甚至感恩的“失败”？  </li>
-<li>你长久以来坚持的人生准则是什么？  </li>
-<li>你做过的最有价值的投资是什么？  </li>
-<li>你有没有什么离经叛道的习惯？  </li>
-<li>有没有某个信念、行为或习惯真正改善了你的生活？  </li>
-<li>你会给刚刚毕业的大学生什么建议？你希望他们忽略什么建议？  </li>
-<li>在你的专业领域里，你都听过哪些糟糕的建议？  </li>
-<li>你如何拒绝不想浪费精力和时间的人和事？  </li>
-<li>你用什么方法重拾专注力？<br>需要特别注意的是，所有的问题都是有顺序的。不能一开始就问很难回答的问题，也不能一开始就问很大的问题，如果能给一些举例就更好了。</li>
-</ol>
-</blockquote>
-<h3 id="我也尝试问自己这11个问题，先写下当下的答案，未来还可以修改。"><a href="#我也尝试问自己这11个问题，先写下当下的答案，未来还可以修改。" class="headerlink" title="我也尝试问自己这11个问题，先写下当下的答案，未来还可以修改。"></a>我也尝试问自己这11个问题，先写下当下的答案，未来还可以修改。</h3><p><strong>1. 你最常当作礼物送给他人的3本书是什么？</strong></p>
-<blockquote>
-<p>《刻意练习》《谁动了我的奶酪》《人力资源转型》</p>
-</blockquote>
-<p><strong>2. 最近有哪个100美元以内的产品带给你惊喜感？（姑且算500元以内）</strong></p>
-<blockquote>
-<p>软件：<strong>喝水时间</strong>，能在手机和iwatch上准确的提醒和记录每天的饮水情况，体验做的非常好。</p>
-<p>硬件：<strong>小米显示器挂灯</strong>、 <strong>小爱同学</strong>、<strong>yeelight彩色灯泡</strong>、<strong>keep&amp;小米体脂秤</strong>、<strong>米家自动洗手机</strong>，家里使用频率非常高。</p>
-<p>Web: <strong>archive.org(免费图书馆，英文原著)</strong></p>
-</blockquote>
-<p><strong>3. 有没有某次你发自内心喜欢甚至感恩的“失败”</strong></p>
-<blockquote>
-</blockquote>
-<p><strong>4. 你长久以来坚持的人生准则是什么？</strong></p>
-<blockquote>
-<p>“坚持一步一个脚印”算是一个吧。</p>
-</blockquote>
-<p><strong>5. 你做过的最有价值的投资是什么？</strong></p>
-<blockquote>
-<p>“找个好伴侣是人生最大的投资。”一直比较认可这句话，所以在找对象这方面算是花了非常大的功夫，最终有比较好的回报。现在看来是我最大回报的投资。</p>
-</blockquote>
-<p><strong>6. 你有没有什么离经叛道的习惯？</strong></p>
-<blockquote>
-<p>不理会家人或者长辈那些虚无飘渺的面子作风和讨好型人格吧。</p>
-</blockquote>
-<p><strong>7. 有没有某个信念、行为或习惯真正改善了你的生活？</strong></p>
-<blockquote>
-<p>早起的习惯，相比一些人喜欢熬夜做喜欢的事（打游戏、看电影）我坚持早期，多了好多自己的时间，做了很多自己喜欢的事。</p>
-</blockquote>
-<p><strong>8. 你会给刚刚毕业的大学生什么建议？你希望他们忽略什么建议？</strong></p>
-<blockquote>
-<p>不要冲动决策，不要认为自己年轻就能承担所有的后果和人生弯路，真正的牛人是一直在高速路上奔驰，在泥泞道路上挣扎注定会落后。要选择跟有结果的人学习，哪怕他们告诉你的是错的，也好跟他们学，失败了都会比蜉蝣一世更强。</p>
-</blockquote>
-<p><strong>9. 在你的专业领域里，你都听过哪些糟糕的建议？</strong></p>
-<blockquote>
-<p>记不住了，糟糕的我听了都不会放心上。</p>
-</blockquote>
-<p><strong>10. 你如何拒绝不想浪费精力和时间的人和事？</strong></p>
-<blockquote>
-<p>不是自己喜欢的，就绕道而行，学习阿德勒的心理学，做课题分离，主要我不在乎，你就拿我没办法。</p>
-</blockquote>
-<p><strong>11. 你用什么方法重拾专注力？</strong></p>
-<blockquote>
-<p>独处吧，选择安静和独处，再来点阿Q精神。</p>
-</blockquote>
-
+    <a style="--stagger:0" href="/wiki/2022-9-28-%E5%88%86%E6%AD%A7%E5%A4%84%E7%90%86%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          分歧处理技术学习
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>今天再次作为助教参加了O哥给乘风计划小伙伴们的分歧处理工作坊，相较于之前做MVP的时候O哥的辅导本次有新的收货，所以专门记录下这个高阶职场技能的学习心得。</p>
+<h1 id="收获："><a href="#收获：" class="headerlink" title="收获："></a>收获：</h1><ol>
+<li>相较于之前更系统的学习了O哥的6+3方法论，有一个拆分和复盘的框架了；
+            </li></ol></div>
+          
+        </p>
+        <p class="line-clamp-4">
+          9月 27
+          ·
+          4 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:1" href="/wiki/2022-9-25-%E5%A4%A7%E6%95%B0%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E8%B0%83%E6%95%B4/" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          大数组织结构调整
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>数学项目组是去年下半年公司孵化的一个项目，从战略中台孵化成一级部门，从做小学数学到”大数”。830管理层决策暂时关闭”大数”业务。<br>到公司1年半的时间，这是第三次经历组织结构调整，前2次是TT带着BP团队牵头，这次算是我牵头吧，毕竟自己是””大数””的HRBP。从接到消息，做完第一版方案，后被M老师搞砸，做完第二版方案，再到基本执行落地完成，时间从9月5日一直延续到9月23日。这个过程让我这个久经沙场的HR老鸟也有所反思。</p>
             </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
+          
+        </p>
+        <p class="line-clamp-4">
+          9月 26
+          ·
+          8 min
+        </p>
+      </section>
+    </a>
+  
     
-<nav id="article-nav">
     
-        <a href="/wiki/2022-8-3-%E6%83%B3%E9%80%9A%E8%BF%87%E5%A4%8D%E7%9B%98%E6%8F%90%E5%8D%87%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8F%8D%E6%80%9D%E6%B7%B1%E5%BA%A6%EF%BC%882022%E5%B9%B48%E6%9C%884%E6%97%A5%201027%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
-                
-                    想通过复盘提升自己的反思深度
-                
+    <a style="--stagger:2" href="/wiki/2022-8-28-%E5%AD%A6%E4%B9%A0%E4%B8%8A%E7%9A%84%E5%BC%AF%E8%B7%AF%EF%BC%88%E4%BB%8E%E4%B8%80%E7%B1%BB%E7%BB%83%E4%B9%A0%E5%88%B0%E5%85%AD%E7%B1%BB%E7%BB%83%E4%B9%A0%EF%BC%89/" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          学习上的弯路（从一类练习到六类练习）
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><img src="https://s2.loli.net/2022/08/28/QLGYaeoPwrTj17V.jpg" alt="image.png"><br>今天在折腾青龙面板，之前是闲鱼上花钱让被人搭建的，主要想研究透，以后具备复制的能力。所以花了几天时间从0-1搭建了青龙面板。这个事情本身不重要，但是学习的过程中体会到的学习方法非常重要。<br>一类练习：做中学，有手都能干；买的系统，别人已经把技术问题都解决了，然后我只需要用。不懂的就百度下，软件界面本身用户体验也中规中矩。所以花了有1-2个月的时间是在用。</p>
             </div>
-        </a>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 28
+          ·
+          3 min
+        </p>
+      </section>
+    </a>
+  
     
     
-        <a href="/wiki/2019-03-29-%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">实习总结（文静）</div>
-        </a>
+    <a style="--stagger:3" href="/wiki/2022-8-25-%E9%87%8F%E4%BA%A7%E9%A2%84%E7%AE%97%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          量产预算的一些思考
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>上周用工规划会上CY的量产预算被讨论，WC老师直接问道量产费用谁定的价，定价依据是什么，欧哥说以之前的经验来说价格感觉是高的，罗老师说定价依据主要是看图片大小，像素和画手需要的时间，所以让kevin给一些图片做参考。最后因为会上没有足够的信息，所以会后todo是让kevin重新梳理下图片量产定价的过程和依据。</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 25
+          ·
+          4 min
+        </p>
+      </section>
+    </a>
+  
     
-</nav>
-
-
-
-
-
+    
+    <a style="--stagger:4" href="/wiki/2022-8-24-%E5%A4%84%E7%90%86%E5%A4%96%E9%83%A8%E6%81%B6%E6%84%8F%E5%B7%AE%E8%AF%84/" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          前员工的恶意差评
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>红B知抖作为现在年轻人的主阵地，但凡发生点不如意的事情，都会想要上去发个帖子吐槽下。与之相对应的还有脉脉这个软件，脉脉无好公司，哪怕是世界上最值钱的公司也会被喷。一般来讲正式员工或多或少都会有所顾忌，眼前留一线，江湖好相见。但实习生同学们可能不这样认为，有种被迫害心理，觉得自己吃了很大个亏，要让全世界都知道，要做正义的使者，让坑自己的公司受到正义的制裁。这种心理本身没有问题，有问题的是对是非和问题以及对舆论的伤害程度的判断。</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 24
+          ·
+          6 min
+        </p>
+      </section>
+    </a>
+  
     
     
-
-
-
-
-<!-- baidu url auto push script -->
-<script type="text/javascript">
-    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
-</script>     
-
-
+    <a style="--stagger:5" href="/wiki/2022-8-19-%E8%B7%9FTT%E7%BB%A9%E6%95%88%E9%9D%A2%E8%B0%88/" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          跟TT绩效面谈
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><em>8月17日下午开完HR全员会，TT单独约了时间沟通绩效。主要还是希望对上半年的绩效做一个反馈，能感觉到婷姐压力也是蛮大，BP团队的绩效可能不是那么好，WC老师应该给了小幅低于预期的结果。自己也尝试着给TT减少一些压力，自己还是挺能体感她，一个同龄女人跟我做着一样的工作，却要承担更多的不容易</em></p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 19
+          ·
+          7 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:6" href="/wiki/2022-8-16-%E8%B7%9FSuri%E7%9A%84%E6%99%9A%E9%A4%90/" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          跟Suri的晚餐
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p>上一次跟Suri吃饭还是去年刚来CYA的时候，当时因为自己拿了中关村JK成都HRD的offer，想拉Suri一起过去做招聘，最后因为我自己原因没有去，约了个饭算是跟她讲清楚前因后果，这次的晚餐是因为她拿了CYA的offer想收我的体感信息，作为她判断是否适合这份工作的一些信息输入。</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 16
+          ·
+          7 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:7" href="/wiki/2022-8-13-%E5%AE%9E%E4%B9%A0%E7%94%9F%E7%9A%84%E6%80%9D%E8%80%83/" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          关于实习生的一点思考
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><img src="https://s2.loli.net/2022/08/13/mWEfdYHipa8lDnR.jpg" alt="懒虫书吧.jpeg"></p>
+<p>自己第一次正式当实习生是在2009年作为工程监理在联通实习，然后又通过管培生岗位提前进Sunstar实习。<br>自己管实习生就比较晚了，是从旷视才开始的。因为HC的比较有限，用工成本等原因，当时华南区域新建只给了我1个实习生HC。后来因为3个主要城市都有office了，替换成了2个正式的HC。原因是当时区域规模比较小存在不确定性，其次是我的老板的成本压力比较大，用实习生无疑是一个比较弹性的方案。</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 13
+          ·
+          5 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:8" href="/wiki/2022-8-3-%E6%83%B3%E9%80%9A%E8%BF%87%E5%A4%8D%E7%9B%98%E6%8F%90%E5%8D%87%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8F%8D%E6%80%9D%E6%B7%B1%E5%BA%A6%EF%BC%882022%E5%B9%B48%E6%9C%884%E6%97%A5%201027%EF%BC%89/" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          想通过复盘提升自己的反思深度
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><strong>为什么要记录这个话题？</strong><br>    1. 跟Kevin合作有3个季度了，其中一个印象比较深刻的点是他的思维方式和学习框架，一开始觉得他这是在故意把问题复杂化，但是经过这段时间的搭档，也发现了框架思考的好处，那就是能更系统化，更全面更深入的看待问题。Kevin的思考方式平时运用到了他的日报和对问题的反思上，包括跟他一起面试，提问的逻辑和深入度，确实体现出来了框架思考的优势；</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 05
+          ·
+          6 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a style="--stagger:9" href="/wiki/index/" data-animate>
+      <header>
+        <h2 class="font-bold text-xl">
+          费里斯的11个好问题
+        </h2>
+      </header>
+      <section class="text-gray-400 my-2 text-sm time">
+        <p class="line-clamp-4">
+          
+            <div class="py-2">
+              <p><strong>或许跟我一样，偶尔会思考以下几个问题：</strong><br>如果你对面坐着一个跟你不是特别熟悉的前辈，你不想尴尬，必须和对方聊点什么的时候，你该怎么提问？<br> 如果你跟公司CEO同时走进电梯，你可以跟他聊些什么话题？<br> 不让对方感觉尴尬，又能让你从中获益的问题有哪些？</p>
+            </div>
+          
+        </p>
+        <p class="line-clamp-4">
+          8月 05
+          ·
+          4 min
+        </p>
+      </section>
+    </a>
+  
 </section>
-        </div>
-        <footer id="footer">
-    <div class="outer">
-        <div id="footer-info" class="inner">
-            harteyang &copy; 2024 
-            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
-            
-                <br>
-           
-            
-        </div>
-    </div>
+
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <span>© 2024 harte.top</span>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="external nofollow noopener noreferrer">Maple</a>
+  </div>
+
 </footer>
 
-        
-
-    
-        
-<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-share.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-video.min.js"></script>
-
-    
-    
-        
-<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
-
-    
-    
-        <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true,
-            TeX: {
-                equationNumbers: {
-                  autoNumber: 'AMS'
-                }
-            }
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-
-
-<!-- Custom Scripts -->
-
+  <div class="back-to-top box-border fixed right-6 z-1024 -bottom-20 rounded py-1 px-1 bg-slate-900 opacity-60 text-white cursor-pointer text-center dark:bg-slate-600">
+    <span class="flex justify-center items-center text-sm">
+      <iconify-icon width="18" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+      <span id="scrollpercent"><span>0</span> %</span>
+    </span>
+  </div>
+  
 <script src="/js/main.js"></script>
 
 
-    </div>
+  <script>
+    $(document).ready(function () {
+      const mapleCount = "10";
+      const speed = "0.5";
+      const mapleEl = document.getElementById("maple");
+      const maples = Array.from({ length: mapleCount }).map(() => {
+        const maple = document.createElement("div");
+        const scale = Math.random() * 0.5 + 0.5;
+        const offset = Math.random() * 2 - 1;
+        const x = Math.random() * mapleEl.clientWidth;
+        const y = -Math.random() * mapleEl.clientHeight;
+        const duration = 10 / speed;
+        const delay = -duration;
+        maple.className = "maple";
+        maple.style.width = `${24 * scale}px`;
+        maple.style.height = `${24 * scale}px`;
+        maple.style.left = `${x}px`;
+        maple.style.top = `${y}px`;
+        maple.style.setProperty("--maple-fall-offset", offset);
+        maple.style.setProperty("--maple-fall-height", `${Math.abs(y) + mapleEl.clientHeight}px`);
+        maple.style.animation = `fall ${duration}s linear infinite`;
+        maple.style.animationDelay = `${delay}s`;
+        mapleEl.appendChild(maple)
+        return maple
+      })
+    });
+  </script>
+  
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none print:hidden" id="maple"></div>
 </body>
+
 </html>
