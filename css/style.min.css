@@ -19,7 +19,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
-    max-width: 750px; /* 设置最大宽度，防止在大屏幕上过于宽松 */
+    max-width: 800px; /* 设置最大宽度，防止在大屏幕上过于宽松 */
     text-align: left;
     background-color: var(--background-color);
     word-wrap: break-word;
@@ -31,7 +31,7 @@ body {
 }
 
 /* 媒体查询，针对小屏幕设备进一步优化 */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     body {
         width: 90%; /* 在小屏幕上适当增大宽度 */
         padding: 10px; /* 减少内边距 */
