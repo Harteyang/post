@@ -39,6 +39,9 @@ body {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    .blog-posts li span {
+        display: none;
+    }
 }
 
 h1,
@@ -164,13 +167,14 @@ ul.blog-posts li:nth-child(odd) {
 ul.blog-posts li span {
     flex: 0 0 15%;
     /* 设置日期的宽度为 20%，可按需调整 */
-    font-size: smaller;
+    /* font-size: smaller; */
     text-align: center; 
 }
 
 ul.blog-posts li a {
     flex: 0 0 80%;
     /* 设置标题的宽度为 80%，可按需调整 */
+    /* margin-left: 10px; */
     
 }
 ul.blog-posts li .post-number {
