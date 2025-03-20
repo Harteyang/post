@@ -31,7 +31,7 @@ body {
 }
 
 /* 媒体查询，针对小屏幕设备进一步优化 */
-@media (max-width: 500px) {
+@media (max-width: 767px) {
     body {
         /* width: 90%; 在小屏幕上适当增大宽度 */
         padding: 10px; /* 减少内边距 */
