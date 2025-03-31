@@ -42,6 +42,15 @@ body {
     .blog-posts li span {
         display: none;
     }
+    ul.blog-posts li {
+        flex-direction: column;
+    }
+    ul.blog-posts li a {
+        flex: 0 0 100%;
+        /* 设置标题的宽度为 80%，可按需调整 */
+        /* margin-left: 10px; */
+        
+    }
 }
 
 h1,
